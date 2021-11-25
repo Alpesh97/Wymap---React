@@ -1,0 +1,77 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { colors } from "@utils/constant";
+
+const tableStyles = makeStyles({
+  tableWrapper: {
+    boxShadow: "0 3px 8px 0 rgba(97, 97, 97, 0.08)",
+    backgroundColor: colors.white,
+    borderRadius: "6px",
+    marginTop: 25,
+    border: "1px solid #ebeef6",
+  },
+  customTable: {
+    maxHeight: 680,
+    boxShadow: "none",
+    "& .MuiTable-root": {
+      minWidth: 950,
+      tableLayout: "fixed",
+      "& .MuiTableCell-root": {
+        fontWeight: 500,
+        color: colors.black,
+        border: "none",
+        wordBreak: "break-all",
+      },
+      "& .MuiTableHead-root": {
+        boxShadow: "0 3px 8px 0 rgba(97, 97, 97, 0.08)",
+        backgroundColor: colors.white,
+        "& .MuiTableCell-root": {
+          color: "rgba(33, 33, 33, 0.7)",
+          padding: "30px 25px",
+          backgroundColor: colors.white,
+          borderBottom: "1px solid #f4f4f4",
+          "&:first-child": {
+            paddingLeft: "30px",
+          },
+          "&:last-child": {
+            paddingRight: "30px",
+          },
+        },
+      },
+      "& .MuiTableBody-root": {
+        "& .MuiTableCell-root": {
+          padding: "22px 25px",
+          "&:first-child": {
+            paddingLeft: "30px",
+          },
+          "&:last-child": {
+            paddingRight: "30px",
+          },
+          "&.jobs": {
+            color: colors.skyblue,
+          },
+        },
+      },
+      "& .jobs": {
+        width: "360px",
+      },
+      "& .date": {
+        width: "140px",
+      },
+      "& .total-time-worked": {
+        width: "210px",
+      },
+      "& .download-report": {
+        width: "210px",
+        "& button": {
+          fontSize: "14px",
+          boxShadow: "none !important",
+          backgroundColor: "rgba(0, 174, 239, 0.1) !important",
+          textTransform: "capitalize",
+          color: colors.skyblue,
+        },
+      },
+    },
+  },
+});
+
+export { tableStyles };
